@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tablas de Verdad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="encabezado">
+        <h1>Tablas de Verdad</h1>
+    </div>
+    <div class="container">
+        <div class="contenido">
+            <div class="primero">
+                <label for="variablesInput">Ingrese el número de variables: </label>
+                <input type="number" id="variablesInput">
+            </div>
+
+            <div class="segundo">
+                <label for="operacionSelect">Seleccione la operación lógica:</label>
+                <select id="operacionSelect">
+                    <option value="AND">Y (AND)</option>
+                    <option value="OR">O (OR)</option>
+                    <option value="IMPLIES">Si...entonces (CONDICIONAL)</option>
+                    <option value="XOR">Si y solo si (CONDICIONAL DOBLE)</option>
+                </select>
+            </div>
+
+    <div class="selects">
+        <label for="var1Select">Seleccione variable 1:</label>
+        <select id="var1Select"></select>
+    
+        <label for="var2Select">Seleccione variable 2:</label>
+        <select id="var2Select"></select>
+    </div>
+
+    <div class="tercero">
+        <button onclick="calcular()">Generar Tabla</button>
+    </div>
+    <div id="tablaVerdad"></div>
+        </div>
+    </div>
+    
+
+    <script src="operaciones.js"></script>
+    <script>
+        document.getElementById('variablesInput').addEventListener('change', function() {
+            llenarSelectores();
+        });
+    </script>
+</body>
+</html>
+
+
+
+
